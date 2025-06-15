@@ -11,7 +11,6 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y copr enable sentry/kernel-blu
-echo "exclude=kernel*" >> /etc/yum.repos.d/fedora-updates.repo
 dnf5 -y copr enable miokudev/fjordlauncherunlocked
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 dnf5 -y copr enable swayfx/swayfx 
